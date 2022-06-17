@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 		color: 16711740,
 		author : {
 			name: 'Easy IP grabber for Discord',
-			icon_url: '',
+			icon_url: 'https://raw.githubusercontent.com/sefinek24/easy-ip-grabber-for-discord/main/images/swagcat.png',
 		},
 		description: `\`\`\`${req.headers['user-agent']}\`\`\``,
 		fields: [
