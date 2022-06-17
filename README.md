@@ -9,7 +9,7 @@ Niniejszy skrypt został stworzony wyłącznie do celów edukacyjnych. Pamiętaj
 ## 📃️・Informacje
 Jeżeli użytkownik wejdzie na stronę internetową, webhookiem zostanie wysłany jego adres IP oraz pozostałe informacje.  
 Pamiętaj, że musisz mieć hosting www oraz domenę, aby użytkownicy mogli wyświetlić stronę z grabberem.  
-Jeśli masz jakieś pytania, skontaktuj się ze mną na Discordzie. Nick znajdziesz na moim profilu na GitHubie.
+Masz może jakieś pytania? Skontaktuj się ze mną na Discordzie. Nick znajdziesz na moim profilu na GitHubie.
 
 ## 📥・Jak to uruchomić
 1. Pobierz i zainstaluj [Node.js LTS](https://nodejs.org/en) w wersji.
