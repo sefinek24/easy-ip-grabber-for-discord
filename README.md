@@ -1,6 +1,6 @@
 <div align="center">
     <img src="https://raw.githubusercontent.com/sefinek24/easy-ip-grabber-for-discord/main/images/swagcat.png" alt="Swagcat">
-    <h1>Łatwy grabber IP - Discord Webhooks</h1>
+    <h1>Prosty grabber IP - Discord Webhooks</h1>
 </div>
 
 ## ⚠️・Ostrzeżenie
