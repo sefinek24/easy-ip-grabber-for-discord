@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/sefinek24/easy-ip-grabber-for-discord#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "helmet": "^5.1.0",
