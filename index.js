@@ -1,8 +1,10 @@
 require('dotenv').config();
 
-if (!process.env.PORT) return console.warn('Please enter port to the .env file.');
-if (isNaN(process.env.PORT)) return console.warn('The specified port is not a number. Please check your .env file.');
-if (!process.env.WEBHOOK_URL) return console.warn('The Webhook URL was not given.');
+console.log('Kontrola pliku .env...');
 
-console.log('Please wait...');
+if (!process.env.PORT) return console.warn('Wprowadź port do pliku .env.');
+if (isNaN(process.env.PORT)) return console.warn('Podany port w pliku .env nie jest liczbą.');
+if (!process.env.WEBHOOK_URL) return console.warn('Adres URL webhooka nie został podany.');
+
+console.log('Trwa uruchamianie serwera www...\n');
 require('./server.js');

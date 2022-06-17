@@ -1,13 +1,18 @@
 const express = require('express');
+const { hidePoweredBy } = require('helmet');
+const favicon = require('serve-favicon');
 const morgan = require('morgan');
 const path = require('path');
+const open = require('open');
 const grabIp = require('./scripts/grabIp.js');
-const { hidePoweredBy } = require('helmet');
+
+const url = `http://127.0.0.1:${process.env.PORT}`;
 
 const app = express();
 
 app.use(hidePoweredBy());
-app.use(morgan('combined'));
+app.use(favicon('images/swagcat.png'));
+app.use(morgan('[:date[clf]]: :remote-addr - :remote-user ":method :url HTTP/:http-version" :status - ":user-agent"'));
 
 app.get('*', (req, _, next) => {
 	grabIp(req);
@@ -23,5 +28,6 @@ app.get('/little-cats', (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-	console.log(`App is running at http://127.0.0.1:${process.env.PORT}`);
+	console.log(`Aplikacja uruchomiona na adresie ${url}\nDostępne podstrony: • /little-cats`);
+	open(`${url}/little-cats`);
 });

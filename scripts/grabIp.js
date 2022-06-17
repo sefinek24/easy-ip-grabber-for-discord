@@ -26,9 +26,6 @@ module.exports = req => {
 		data: JSON.stringify({ embeds }),
 	};
 
-	try {
-		axios(config);
-	} catch (err) {
-		console.log(err);
-	}
+
+	axios(config).catch(err => console.error('Webhook nie został wysłany.', err.message));
 };
