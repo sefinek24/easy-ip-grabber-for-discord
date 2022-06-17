@@ -1,10 +1,10 @@
 <div align="center">
+    <img src="https://raw.githubusercontent.com/sefinek24/easy-ip-grabber-for-discord/main/images/swagcat.png" alt="Swagcat">
     <h1>Łatwy grabber IP - Discord Webhooks</h1>
 </div>
 
 ## ⚠️・Ostrzeżenie
-Niniejszy skrypt został stworzony wyłącznie do celów edukacyjnych. Pamiętaj, żeby myśleć przed pisaniem czegokolwiek.  
-Wszystkie konsekwencje wynikające z Twoich działań są Twoją odpowiedzialnością.
+Niniejszy skrypt został stworzony wyłącznie do celów edukacyjnych. Pamiętaj, żeby myśleć przed pisaniem czegokolwiek. Wszystkie konsekwencje wynikające z Twoich działań są Twoją odpowiedzialnością.
 
 ## 📃️・Informacje
 Jeżeli użytkownik wejdzie na stronę internetową, webhookiem zostanie wysłany jego adres IP oraz pozostałe informacje.  
