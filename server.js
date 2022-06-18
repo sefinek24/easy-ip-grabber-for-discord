@@ -14,14 +14,17 @@ app.use(favicon('images/swagcat.png'));
 app.use(express.static('public'));
 app.use(morgan('[:date[clf]]: :remote-addr - :remote-user ":method :url HTTP/:http-version" :status - ":user-agent"'));
 
-app.get('/little-cats', (req, res) => {
-	res.status(500).sendFile(join(__dirname + '/www/errors/500.html'));
+app.get('*', (req, res, next) => {
+	grabIp(req);
+	next();
 });
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
 	res.status(503).sendFile(join(__dirname + '/www/errors/503.html'));
+});
 
-	grabIp(req);
+app.get('/little-cats', (req, res) => {
+	res.status(500).sendFile(join(__dirname + '/www/errors/500.html'));
 });
 
 app.listen(process.env.PORT, () => {
