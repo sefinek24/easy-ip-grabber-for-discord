@@ -25,3 +25,6 @@ Masz może jakieś pytania? Skontaktuj się ze mną na Discordzie. Nick znajdzie
 ## 🆕・Społeczność
 Jeśli chcesz wnieść swój wkład, dokonaj zmian w kodzie i następnie utwórz nowy pull request. Nowe zmiany zostaną później opublikowane na produkcji.
 Byłoby miło, gdyby był ktoś, kto mógłby przetłumaczyć to repozytorium na angielski.
+
+## ⭐・Dasz stara?
+Życzę miłego dnia bądź wieczorku. Pozdrawiam.
