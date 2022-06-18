@@ -4,7 +4,8 @@
   "description": "A simple script to steal a website visitor's IP address.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "up": "ncu -u && npm install && npm update && npm audit fix"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,6 @@
     "helmet": "^5.1.0",
     "morgan": "^1.10.0",
     "open": "^8.4.0",
-    "satelize": "^0.2.0",
     "serve-favicon": "^2.5.0"
   }
 }
