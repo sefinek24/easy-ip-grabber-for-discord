@@ -5,7 +5,7 @@ const { version } = require('../package.json');
 module.exports = req => {
 	const data = geoIp.lookup(req.ip) || { country: null, region: null, timezone: null };
 
-	const embed = [{
+	const embeds = [{
 		color: 16330592,
 		author : {
 			name: `The user has visited the site ${req.hostname} (${process.env.NODE_ENV})`,
@@ -52,7 +52,7 @@ module.exports = req => {
 		method: 'POST',
 		url: process.env.WEBHOOK_URL,
 		headers: { 'Content-Type': 'application/json' },
-		data: JSON.stringify({ embed }),
+		data: JSON.stringify({ embeds }),
 	};
 
 	axios(config).catch(err => console.error('Webhook nie został wysłany.', err.message));
